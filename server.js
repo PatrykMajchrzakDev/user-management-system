@@ -23,11 +23,10 @@ app.use("/css", express.static(path.resolve(__dirname, "assets/css")));
 app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 app.use("/img", express.static(path.resolve(__dirname, "assets/img")));
 
-app.get("/", (req, res) => {
-  //dont have to add extension bacause view engine sets it that all are .ejs
-  res.render("index");
-});
+//load routers
+app.use("/", require("./server/routes/router"));
 
+//PORT
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
