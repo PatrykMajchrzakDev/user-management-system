@@ -178,6 +178,9 @@ table th {
 #add_user .form-group .radio {
   margin: 1em 2em;
 }
+.delete {
+  cursor: pointer;
+}
 
 /* radio buttons style */
 
